@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NearestLandmarksCollectionViewCell" customModule="TaipeiParkAPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c4M-rX-F25">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="LwG-Qe-sXd"/>
+                        <constraint firstAttribute="height" constant="80" id="gaD-r1-ESQ"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn7-r3-YJK">
+                    <rect key="frame" x="0.0" y="80" width="80" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <rect key="contentStretch" x="0.0" y="0.0" width="0.90000000000000002" height="1"/>
+            <constraints>
+                <constraint firstItem="c4M-rX-F25" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0mH-qJ-qYU"/>
+                <constraint firstItem="dn7-r3-YJK" firstAttribute="top" secondItem="c4M-rX-F25" secondAttribute="bottom" id="1In-cQ-Y9e"/>
+                <constraint firstItem="c4M-rX-F25" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TWp-Lh-LQK"/>
+                <constraint firstAttribute="trailing" secondItem="dn7-r3-YJK" secondAttribute="trailing" id="TlH-Ix-v77"/>
+                <constraint firstItem="dn7-r3-YJK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="b2e-ru-jmU"/>
+                <constraint firstAttribute="bottom" secondItem="dn7-r3-YJK" secondAttribute="bottom" id="tTC-IL-QkC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="landmarkImageView" destination="c4M-rX-F25" id="8cd-oj-MuL"/>
+                <outlet property="landmarkName" destination="dn7-r3-YJK" id="pNg-WQ-FI1"/>
+            </connections>
+            <point key="canvasLocation" x="-121" y="-231"/>
+        </view>
+    </objects>
+</document>
