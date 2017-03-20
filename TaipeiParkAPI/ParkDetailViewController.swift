@@ -39,6 +39,7 @@ class ParkDetailViewController: UIViewController {
     func upDataUI() {
         if let revceivedData = self.landmark
         {
+  
             if let imgURL = landmark?.imageURL {
                 if let imageData = try? Data(contentsOf: imgURL) {
                     DispatchQueue.main.async { [weak weakSelf = self] in

@@ -10,10 +10,28 @@ import UIKit
 
 class ParkTableViewCell: UITableViewCell {
     
-    
     var landmark: LandmarkDetail?  {
         didSet{
             self.updateUI()
+        }
+    }
+    
+    var parkImage: UIImage? {
+        get{
+            return self.parkImageView.image
+        }
+        set{
+            self.parkImageView.image = newValue
+        }
+    }
+    
+    // MARK: - Declartion
+    var imageURL: URL? {
+        didSet {
+            self.parkImage = nil
+            if self.parkImageView?.image == nil {
+                fetchImage()
+            }
         }
     }
 
@@ -43,18 +61,26 @@ class ParkTableViewCell: UITableViewCell {
         self.nameLabel.text = "\(self.landmark!.parkName) - \(self.landmark!.name)"
         self.introductionField.text = self.landmark?.introduction
         self.openTimeLabel.text = self.landmark?.openTime
-        if let imgURL = landmark?.imageURL {
-            if let imageData = try? Data(contentsOf: imgURL) {
-                DispatchQueue.main.async { [weak weakSelf = self] in
-                    // blocks main thread!
-                    weakSelf?.parkImageView.image = UIImage(data: imageData as Data)
-                }
-            }
-        }else {
-            self.parkImageView.image = UIImage(named: "park")
-        }
+        self.imageURL = landmark?.imageURL
     }
     
+    private func fetchImage() {
+        if let url = imageURL{
+            DispatchQueue.global(qos: .userInitiated).async {
+                let contentOfURL = NSData(contentsOf: url as URL)
+                DispatchQueue.main.async { [weak self] in
+                    if url == self?.imageURL {
+                        if let imageData = contentOfURL{
+                            self?.parkImage = UIImage(data: imageData as Data)
+                        } else {
+                        }
+                    }else {
+                        self?.parkImage = UIImage(named: "park")
+                    }
+                }
+            }
+        }
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
