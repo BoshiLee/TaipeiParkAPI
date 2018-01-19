@@ -44,7 +44,6 @@ class ApiManager {
         }
         catch {
             Errors.message("Failed to load Api Data!").handler()
-            //Error.retrieve(.message("Failed to load Api Data!"))
         }
         return nil
 

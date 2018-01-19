@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum Errors {
+
+enum Errors: Error {
     case message(String)
     case fatal(num: Int, message: String)
     
@@ -21,5 +22,4 @@ enum Errors {
         }
     }
 }
-
 
