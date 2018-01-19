@@ -28,15 +28,13 @@ class ParkTableViewCell: UITableViewCell {
     // MARK: - Declartion
     var imageURL: URL? {
         didSet {
-            self.parkImage = nil
-            if self.parkImageView?.image == nil {
-                fetchImage()
-            }
+            self.parkImageView.load(url: self.imageURL!)
+            
         }
     }
 
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var parkImageView: UIImageView! {
+    @IBOutlet weak var parkImageView: WebImageView! {
         didSet {
             self.parkImageView.clipsToBounds = true
             self.parkImageView.layer.cornerRadius = 40

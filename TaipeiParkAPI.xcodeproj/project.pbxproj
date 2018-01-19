@@ -22,6 +22,7 @@
 		9FC871C21E7E7199004B1DDE /* LunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FC871C11E7E7199004B1DDE /* LunchScreen.png */; };
 		9FC871C41E7E7C82004B1DDE /* ParkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC871C31E7E7C82004B1DDE /* ParkDetailViewController.swift */; };
 		9FC871C81E7E844C004B1DDE /* StoryBoardNameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC871C71E7E844C004B1DDE /* StoryBoardNameSpace.swift */; };
+		9FCE4DFE2012177800CFBEE8 /* WebImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCE4DFD2012177800CFBEE8 /* WebImageView.swift */; };
 		9FDF74A31E7C54E3006C898D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF74A21E7C54E3006C898D /* Errors.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		9FC871C11E7E7199004B1DDE /* LunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LunchScreen.png; sourceTree = "<group>"; };
 		9FC871C31E7E7C82004B1DDE /* ParkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkDetailViewController.swift; sourceTree = "<group>"; };
 		9FC871C71E7E844C004B1DDE /* StoryBoardNameSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryBoardNameSpace.swift; sourceTree = "<group>"; };
+		9FCE4DFD2012177800CFBEE8 /* WebImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImageView.swift; sourceTree = "<group>"; };
 		9FDF74A21E7C54E3006C898D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				9FC871C71E7E844C004B1DDE /* StoryBoardNameSpace.swift */,
+				9FCE4DFD2012177800CFBEE8 /* WebImageView.swift */,
 				9F9CD1C51E7CEB10005D33BD /* APIModel */,
 				9FC871BC1E7E3DC0004B1DDE /* ParkTable */,
 				9FA15CC01E7AD9B10001D571 /* Main.storyboard */,
@@ -209,6 +212,7 @@
 				9FA15CD31E7AE45C0001D571 /* ParkTableViewCell.swift in Sources */,
 				9FC871C41E7E7C82004B1DDE /* ParkDetailViewController.swift in Sources */,
 				9FA15CBD1E7AD9B10001D571 /* AppDelegate.swift in Sources */,
+				9FCE4DFE2012177800CFBEE8 /* WebImageView.swift in Sources */,
 				9FC871C81E7E844C004B1DDE /* StoryBoardNameSpace.swift in Sources */,
 				9F850BF61E7EB2DD00AF96A9 /* NearestLandmarkCollectionView.swift in Sources */,
 				9FA15CD71E7AE8020001D571 /* ApiManager.swift in Sources */,

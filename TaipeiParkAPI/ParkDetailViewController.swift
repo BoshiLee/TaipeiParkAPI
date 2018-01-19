@@ -21,7 +21,7 @@ class ParkDetailViewController: UIViewController {
     }
     var indexPath: IndexPath?
 
-    @IBOutlet weak var parkImageView: UIImageView!
+    @IBOutlet weak var parkImageView: WebImageView!
     @IBOutlet weak var parkNameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var openTimeLabel: UILabel!
@@ -41,12 +41,7 @@ class ParkDetailViewController: UIViewController {
         {
   
             if let imgURL = landmark?.imageURL {
-                if let imageData = try? Data(contentsOf: imgURL) {
-                    DispatchQueue.main.async { [weak weakSelf = self] in
-                        // blocks main thread!
-                        weakSelf?.parkImageView.image = UIImage(data: imageData as Data)
-                    }
-                }
+                self.parkImageView.load(url: imgURL)
             }else {
                 self.parkImageView.image = UIImage(named: "park")
             }

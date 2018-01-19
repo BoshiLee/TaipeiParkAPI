@@ -15,7 +15,7 @@ class NearestLandmarksCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    @IBOutlet weak var landmarkImageView: UIImageView! {
+    @IBOutlet weak var landmarkImageView: WebImageView! {
         didSet{
             self.landmarkImageView.layer.cornerRadius = 40
             self.landmarkImageView.clipsToBounds = true
@@ -28,12 +28,7 @@ class NearestLandmarksCollectionViewCell: UICollectionViewCell {
         self.landmarkName.text = self.lamarkDetail?.name
         
         if let imgURL = lamarkDetail?.imageURL {
-            if let imageData = try? Data(contentsOf: imgURL) {
-                DispatchQueue.main.async { [weak weakSelf = self] in
-                    // blocks main thread!
-                    weakSelf?.landmarkImageView.image = UIImage(data: imageData as Data)
-                }
-            }
+            self.landmarkImageView.load(url: imgURL)
         }else {
             self.landmarkImageView.image = UIImage(named: "park")
         }
